@@ -6,7 +6,7 @@ import time
 import select
 import binascii
 # Should use stdev
-
+#
 ICMP_ECHO_REQUEST = 8
 
 
@@ -50,7 +50,7 @@ def receiveOnePing(mySocket, ID, timeout, destAddr):
         # Fill in start
 
         # Fetch the ICMP header from the IP packet
-
+        icmp_header = recPacket[20:28]
         # Fill in end
         timeLeft = timeLeft - howLongInSelect
         if timeLeft <= 0:
